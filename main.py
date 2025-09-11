@@ -1,0 +1,58 @@
+"""
+Créé par Dorian Bernaquez Girard le 10 Septembre, 2025
+Groupe 402
+Jeu de combattre des monstres en texte
+"""
+
+import random
+import time
+
+game_play = True
+
+choix = -1
+niveau_vie = 20
+force_adversaire = random.randint(1, 5)
+numero_adversaire = 0
+numero_combat = 0
+nombre_victiores = 0
+nombre_defaites = 0
+
+
+def confrontation_monstre():
+    global choix
+    print(f"Vous tombez face à face un adversaire de difficulté :  {force_adversaire}")
+    time.sleep(1)
+    print(
+        "Que voulez-vous faire?\n 1- Combattre cet adversaire\n 2- Contourner l'adversaire et continuer\n 3- Afficher "
+        "les règles du jeu\n 4- Quitter la partie")
+    choix = input("Votre choix: ")
+
+
+def combattre_monstre():
+    global niveau_vie
+    global numero_adversaire
+    global numero_combat
+    print("Vous testez vos chances avec le monstre...")
+    numero_adversaire += 1
+    numero_combat += 1
+    des_nb = random.randint(1, 6)
+    print(f"Adversaire: {numero_adversaire}\nForce de l'adversaire: {force_adversaire}\nNiveau de vie de l'usager: {niveau_vie}\nCombat {numero_combat}: {nombre_victiores} victoires vs. {nombre_defaites} défaites.")
+    print(f"Lancer du dé: {des_nb}")
+    time.sleep(1)
+    if des_nb >= force_adversaire:
+        print("Vouz tué le monstre, voux gagnez 4 points de vie.")
+        niveau_vie += 4
+        print(f"Vous avez {niveau_vie} points de vie.")
+    if des_nb < force_adversaire:
+        print("Vous vouz faite blesser par le monstre, vous perdez 4 points de vie.")
+        niveau_vie -= 4
+        print(f"Vous avez {niveau_vie} points de vie.")
+
+
+while game_play:
+    confrontation_monstre()
+    if niveau_vie == 0:
+        print("Après une longue voyage, vouz tombez mort")
+    if choix == "1":
+        combattre_monstre()
+        time.sleep(2)
