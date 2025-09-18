@@ -38,7 +38,7 @@ def combattre_monstre():
     numero_adversaire += 1
     numero_combat += 1
     des_nb = random.randint(1, 6)
-    print(f"Adversaire: {numero_adversaire}\nForce de l'adversaire: {force_adversaire}\nNiveau de vie de l'usager: {niveau_vie}\nCombat {numero_combat}: {nombre_victiores} victoires vs. {nombre_defaites} défaites.")
+    print(f"Adversaire: {numero_adversaire}\nForce de l'adversaire: {force_adversaire}\nNiveau de vie de l'usager: {niveau_vie}\nCombat {numero_combat}: {nombre_victoires} victoires vs. {nombre_defaites} défaites.")
     print(f"Lancer du dé: {des_nb}")
     time.sleep(1)
     if des_nb >= force_adversaire:
