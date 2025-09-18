@@ -55,9 +55,18 @@ def combattre_monstre():
 def contourner_monstre():
     global niveau_vie
     global numero_adversaire
-    print("Vouz contournez et vous tordez vos cheviles, vouz perdex un point de vie.")
+    print("Vouz contournez et vous tordez vos cheviles, vouz perdez un point de vie.")
     niveau_vie -=1
     numero_adversaire += 1
+
+def regles_jeu():
+    print("Voici les règles:\nPour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l'adversaire. Dans ce cas, le niveau de l'usager est augmenté de la force de l'adversaire.\nUne défaite a lieu lorsque la valeur du dé lancé est inférieur ou égale à la force de l'adversaire. Dans ce cas, le niveau de l'usager est diminué de la force de l'adversaire.")
+    print("\nLa partie se termine lorsque les points de vie de l'usager tombe sous 0")
+    print("\nL'usager peut combattre ou éviter chaque adversaire, dans le cas d'évittement, il y a une penalité de 1 point de vie.")
+
+def quitter():
+    print("Merci et au revoir...")
+    time.sleep(2)
 
 
 while game_play:
@@ -70,3 +79,9 @@ while game_play:
     if choix == "2":
         contourner_monstre()
         time.sleep(2)
+    if choix == "3":
+        regles_jeu()
+        time.sleep(2)
+    if choix == "4"
+        quitter()
+    
