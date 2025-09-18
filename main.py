@@ -14,7 +14,7 @@ niveau_vie = 20
 force_adversaire = random.randint(1, 5)
 numero_adversaire = 0
 numero_combat = 0
-nombre_victiores = 0
+nombre_victoires = 0
 nombre_defaites = 0
 
 
