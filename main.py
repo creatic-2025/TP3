@@ -52,6 +52,13 @@ def combattre_monstre():
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_defaites =- 1
 
+def contourner_monstre():
+    global niveau_vie
+    global numero_adversaire
+    print("Vouz contournez et vous tordez vos cheviles, vouz perdex un point de vie.")
+    niveau_vie -=1
+    numero_adversaire += 1
+
 
 while game_play:
     confrontation_monstre()
@@ -59,4 +66,7 @@ while game_play:
         print("Après une longue voyage, vouz tombez mort")
     if choix == "1":
         combattre_monstre()
+        time.sleep(2)
+    if choix == "2":
+        contourner_monstre()
         time.sleep(2)
