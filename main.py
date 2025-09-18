@@ -32,6 +32,8 @@ def combattre_monstre():
     global niveau_vie
     global numero_adversaire
     global numero_combat
+    global nombre_victoires
+    global nombre_defaites
     print("Vous testez vos chances avec le monstre...")
     numero_adversaire += 1
     numero_combat += 1
@@ -43,10 +45,12 @@ def combattre_monstre():
         print("Vouz tué le monstre, voux gagnez 4 points de vie.")
         niveau_vie += 4
         print(f"Vous avez {niveau_vie} points de vie.")
+        nombre_victoires += 1
     if des_nb < force_adversaire:
         print("Vous vouz faite blesser par le monstre, vous perdez 4 points de vie.")
         niveau_vie -= 4
         print(f"Vous avez {niveau_vie} points de vie.")
+        nombre_defaites =- 1
 
 
 while game_play:
