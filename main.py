@@ -35,6 +35,8 @@ def combattre_monstre():
     global numero_combat
     global nombre_victoires
     global nombre_defaites
+    global victoires_consecutives
+    global combat_status
     print("Vous testez vos chances avec le monstre...")
     numero_adversaire += 1
     numero_combat += 1
@@ -55,10 +57,10 @@ def combattre_monstre():
     if des_nb < force_adversaire:
         combat_status == "Défaite"
         print(f"Dernier combat: {combat_status}")
-        print(f"Vous vouz faite blesser par le monstre, vous perdez {force_adversaire} points de vie.")
+        print(f"Vous vous faite blesser par le monstre, vous perdez {force_adversaire} points de vie.")
         niveau_vie -= force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
-        nombre_defaites =- 1
+        nombre_defaites =+ 1
         print(f"Dommage, vos victoires consécutives sont remis à 0.")
         victoires_consecutives == 0
 def contourner_monstre():
