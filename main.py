@@ -45,7 +45,7 @@ def combattre_monstre():
     if des_nb >= force_adversaire:
         print(f"Dernier combat: {combat_status}")
         time.sleep(1)
-        print(f"Voud tué le monstre, voux gagnez {force_adversaire} points de vie.")
+        print(f"Vous tué le monstre, voux gagnez {force_adversaire} points de vie.")
         niveau_vie += force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_victoires += 1
@@ -59,6 +59,34 @@ def combattre_monstre():
         nombre_defaites =+ 1
         print(f"Dommage, vos victoires consécutives sont remis à 0.")
         victoires_consecutives == 0
+
+def boss_fight():
+    global niveau_vie
+    global numero_adversaire
+    global numero_combat
+    global nombre_victoires
+    global nombre_defaites
+    global victoires_consecutives
+    print("Vous rencontrez un boss, vouz sentez en trouble...")
+    numero_adversaire += 1
+    numero_combat += 1
+    des_nb_boss = random.randint(1, 6)
+    force_adversaire_boss = random.randint(1, 5) 
+    niveau_vie_boss = 10
+    print(f"Adversaire: {numero_adversaire}\nForce de l'adversaire: {force_adversaire}\nNiveau de vie de l'usager: {niveau_vie}\nCombat {numero_combat}: {nombre_victoires} victoires vs. {nombre_defaites} défaites.")
+    print(f"Lancer du dé: {des_nb_boss}")
+    time.sleep(2)
+    if des_nb_boss >= force_adversaire_boss
+        print(f"Dernier attaque: Succès")
+        time.sleep(1)
+        print(f"Vous avez endommagé le boss, il perd {des_nb_boss} points de vie")
+        niveau_vie_boss -= des_nb_boss
+        print(f"Le boss a maintenant {niveau_vie_boss} points de vie")
+    if des_nb_boss < force_adversaire_boss
+        print("Dernier attaque: Dommage")
+        time.sleep(1)
+        print(f"Le boss vous blesse, vous perdez {des_nb_boss} de vie.")
+
 def contourner_monstre():
     global niveau_vie
     global numero_adversaire
