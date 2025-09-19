@@ -16,7 +16,8 @@ numero_adversaire = 0
 numero_combat = 0
 nombre_victoires = 0
 nombre_defaites = 0
-
+combat_status = "Défaite"
+victoires_consecutives = 0
 
 def confrontation_monstre():
     global choix
@@ -40,18 +41,26 @@ def combattre_monstre():
     des_nb = random.randint(1, 6)
     print(f"Adversaire: {numero_adversaire}\nForce de l'adversaire: {force_adversaire}\nNiveau de vie de l'usager: {niveau_vie}\nCombat {numero_combat}: {nombre_victoires} victoires vs. {nombre_defaites} défaites.")
     print(f"Lancer du dé: {des_nb}")
-    time.sleep(1)
+    time.sleep(2)
     if des_nb >= force_adversaire:
-        print(f"Vouz tué le monstre, voux gagnez {force_adversaire} points de vie.")
+        combat_status == "Victoire"
+        print(f"Dernier combat: {combat_status}")
+        time.sleep(1)
+        print(f"Voud tué le monstre, voux gagnez {force_adversaire} points de vie.")
         niveau_vie += force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_victoires += 1
+        victoires_consecutives += 1
+        print(f"Vous avez {victoires_consecutives} de victoires consécutives.")
     if des_nb < force_adversaire:
+        combat_status == "Défaite"
+        print(f"Dernier combat: {combat_status}")
         print(f"Vous vouz faite blesser par le monstre, vous perdez {force_adversaire} points de vie.")
         niveau_vie -= force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_defaites =- 1
-
+        print(f"Dommage, vos victoires consécutives sont remis à 0.")
+        victoires_consecutives == 0
 def contourner_monstre():
     global niveau_vie
     global numero_adversaire
@@ -82,6 +91,14 @@ while game_play:
     if choix == "3":
         regles_jeu()
         time.sleep(2)
-    if choix == "4"
+    if choix == "4":
         quitter()
+        game_play = False
+    if niveau_vie = 0
+        print(f"Vous êtes morts après une longue bataille. Vous avez battu {nombre_victoires} adversaires.")
+        quitter()
+        game_play = False
+
+
+    
     
