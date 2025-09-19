@@ -42,20 +42,20 @@ def combattre_monstre():
     print(f"Lancer du dé: {des_nb}")
     time.sleep(1)
     if des_nb >= force_adversaire:
-        print("Vouz tué le monstre, voux gagnez 4 points de vie.")
-        niveau_vie += 4
+        print(f"Vouz tué le monstre, voux gagnez {force_adversaire} points de vie.")
+        niveau_vie += force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_victoires += 1
     if des_nb < force_adversaire:
-        print("Vous vouz faite blesser par le monstre, vous perdez 4 points de vie.")
-        niveau_vie -= 4
+        print(f"Vous vouz faite blesser par le monstre, vous perdez {force_adversaire} points de vie.")
+        niveau_vie -= force_adversaire
         print(f"Vous avez {niveau_vie} points de vie.")
         nombre_defaites =- 1
 
 def contourner_monstre():
     global niveau_vie
     global numero_adversaire
-    print("Vouz contournez et vous tordez vos cheviles, vouz perdez un point de vie.")
+    print("Vouz contournez le monstre et vous tordez vos cheviles, vouz perdez un point de vie.")
     niveau_vie -=1
     numero_adversaire += 1
 
