@@ -96,7 +96,7 @@ while game_play:
     if choix == "4":
         quitter()
         game_play = False
-    if niveau_vie == 0
+    if niveau_vie == 0:
         print(f"Vous êtes morts après une longue bataille. Vous avez battu {nombre_victoires} adversaires.")
         quitter()
         game_play = False
