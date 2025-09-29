@@ -10,7 +10,7 @@ import time
 game_play = True
 
 choix = -1
-niveau_vie = 20
+niveau_vie = 30
 numero_adversaire = 0
 numero_combat = 0
 nombre_victoires = 0
@@ -100,7 +100,8 @@ def boss_fight():
     if des_nb_boss + des_nb_boss_2 < force_adversaire_boss:
         print("Dernier attaque: Dommage")
         time.sleep(1)
-        print(f"Le boss vous blesse, vous perdez {des_nb_boss} points de vie.")
+        print(f"Le boss vous blesse, vous perdez {force_adversaire_boss} points de vie.")
+        print(f"Vous avez {niveau_vie} points de vie.")
         niveau_vie -= force_adversaire_boss
 
 
@@ -150,7 +151,7 @@ while game_play:
     if choix == "4":
         quitter()
         game_play = False
-    if niveau_vie == 0:
+    if niveau_vie <= 0:
         print(f"Vous êtes morts après une longue bataille. Vous avez battu {nombre_victoires} adversaires.")
         quitter()
         game_play = False

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429ce5ef-ec7c-4c31-bd6b-91367157990f" name="Changes" comment="V 0.9.8&#10;Changements:&#10;- Rajouter des boss, qui apparaient après 3 victoires consécutives.&#10;- Fix au typos&#10;- Majorité des bugs sont enlevés" />
+    <list default="true" id="429ce5ef-ec7c-4c31-bd6b-91367157990f" name="Changes" comment="V 1.0.0&#10;Changements:&#10;- Tous les adversaires ont maintenant deux dés qui contrôle le combat&#10;- Le jeu est complètement opérationel&#10;- Typos fixé" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,12 +128,29 @@
       <option name="project" value="LOCAL" />
       <updated>1759175292793</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="V 1.0.0&#10;Changements:&#10;- Tous les adversaires ont maintenant deux dés qui contrôle le combat&#10;- Le jeu est complètement opérationel&#10;- Typos fixé">
+      <option name="closed" value="true" />
+      <created>1759175842844</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759175842844</updated>
+    </task>
+    <task id="LOCAL-00010" summary="V 1.0.0&#10;Changements:&#10;- Tous les adversaires ont maintenant deux dés qui contrôle le combat&#10;- Le jeu est complètement opérationel&#10;- Typos fixé">
+      <option name="closed" value="true" />
+      <created>1759175852323</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759175852323</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit, nothing fully works yet." />
     <MESSAGE value="V 0.9.8&#10;Changements:&#10;- Rajouter des boss, qui apparaient après 3 victoires consécutives.&#10;- Fix au typos&#10;- Majorité des bugs sont enlevés" />
-    <option name="LAST_COMMIT_MESSAGE" value="V 0.9.8&#10;Changements:&#10;- Rajouter des boss, qui apparaient après 3 victoires consécutives.&#10;- Fix au typos&#10;- Majorité des bugs sont enlevés" />
+    <MESSAGE value="V 1.0.0&#10;Changements:&#10;- Tous les adversaires ont maintenant deux dés qui contrôle le combat&#10;- Le jeu est complètement opérationel&#10;- Typos fixé" />
+    <option name="LAST_COMMIT_MESSAGE" value="V 1.0.0&#10;Changements:&#10;- Tous les adversaires ont maintenant deux dés qui contrôle le combat&#10;- Le jeu est complètement opérationel&#10;- Typos fixé" />
   </component>
 </project>
