@@ -136,6 +136,7 @@ while game_play:
         time.sleep(2)
     elif choix == "1" and interval_boss == range(0, 100, 3):
         boss_fight()
+        time.sleep(2)
     if choix == "2":
         contourner_monstre()
         time.sleep(2)
