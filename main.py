@@ -79,6 +79,7 @@ def boss_fight():
     global nombre_defaites
     global victoires_consecutives
     print("Vous rencontrez un boss, vouz sentez en trouble...")
+    time.sleep(2)
     numero_adversaire += 1
     numero_combat += 1
     des_nb_boss = random.randint(4, 10)
@@ -97,7 +98,7 @@ def boss_fight():
     if des_nb_boss < force_adversaire_boss:
         print("Dernier attaque: Dommage")
         time.sleep(1)
-        print(f"Le boss vous blesse, vous perdez {des_nb_boss} de vie.")
+        print(f"Le boss vous blesse, vous perdez {des_nb_boss} points de vie.")
         niveau_vie -= force_adversaire_boss
 
 
@@ -134,9 +135,10 @@ while game_play:
     if choix == "1":
         combattre_monstre()
         time.sleep(2)
-    elif choix == "1" and interval_boss == range(0, 100, 3):
+    if choix == "1" and victoires_consecutives == 3:
         boss_fight()
         time.sleep(2)
+        victoires_consecutives = 0
     if choix == "2":
         contourner_monstre()
         time.sleep(2)
