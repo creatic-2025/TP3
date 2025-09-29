@@ -1,7 +1,7 @@
 """
 Créé par Dorian Bernaquez Girard le 10 Septembre, 2025
 Groupe 402
-Jeu de combattre des monstres en texte
+Jeu de combattre des monstres, avec des boss. Aucune graphique.
 """
 
 import random
